@@ -1,5 +1,4 @@
 
-# match template
 
 import numpy as np
 from PIL import Image
@@ -16,7 +15,7 @@ face_image_height = face_image_gray.size[1]
 sample_image_width = sample_image_gray.size[0]
 sample_image_height = sample_image_gray.size[1]
 
-# 取平方差最小值
+
 lmin = 0
 x = 0
 y = 0
