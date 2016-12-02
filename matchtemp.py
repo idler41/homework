@@ -16,6 +16,8 @@ sample_image_width = sample_image_gray.size[0]
 sample_image_height = sample_image_gray.size[1]
 
 
+import pdb; pdb.set_trace
+()
 lmin = 0
 x = 0
 y = 0
@@ -40,7 +42,7 @@ for i in xrange( 0, face_image_height - sample_image_height, 5 ):
 print "result point - ", x ,y  
 
 # show result image
-image = cv.imread('matchtemp.png')
+image = cv.imread('test.png')
 cv.rectangle(image,(int(x),int(y)),(int(x)+sample_image_width,int(y)+sample_image_height),(255,255,255),1,0)
 cv.imshow("match template", image)
 cv.waitKey(15000)#7s
