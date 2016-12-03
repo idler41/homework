@@ -28,7 +28,7 @@ for i in xrange( 0, face_image_height - sample_image_height, 5 ):
         ivalue = 0
         for n in xrange( 0, sample_image_height ):
             for m in xrange( 0, sample_image_width ):
-                #square deviation
+                
                 aa = face_image_gray_pixels[ (i+n)*face_image_width + j+m ]
                 bb = sample_image_gray_pixels[ n*sample_image_width + m ]
                 ivalue += abs(aa*aa - bb*bb)
@@ -39,10 +39,10 @@ for i in xrange( 0, face_image_height - sample_image_height, 5 ):
             y = i
 
 
-print "result point - ", x ,y  
+print "match - ", x ,y  
 
 # show result image
 image = cv.imread('test.png')
 cv.rectangle(image,(int(x),int(y)),(int(x)+sample_image_width,int(y)+sample_image_height),(255,255,255),1,0)
-cv.imshow("match template", image)
-cv.waitKey(15000)#7s
+cv.imshow("match", image)
+cv.waitKey(30000)
